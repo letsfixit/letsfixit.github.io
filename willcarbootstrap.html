@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Let's Fix It</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,300italic' rel='stylesheet' type='text/css'>
+	<meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light|Pacifico|Righteous|Architects+Daughter|Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,300italic' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+   
+	<script src="js/ie-emulation-modes-warning.js"></script>
+    <link href="css/carousel.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/willfix.css">
+   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.4.min.js"></script>
+	</head>
+
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Let's Fix It</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">How it Works</a></li>
+                <li><a href="#info">About</a></li>
+                <li><a href="#mechanics">Our Mechanics</a></li>
+                <li><a href="mailto:wmgreenlee4@gmail.com">Contact</a></li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    <!-- Carousel
+    ================================================== -->
+     <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+   
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="first-slide" ></div>
+		  
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 id="slogan">Free Car Consultation From Your Smartphone</h1>
+           
+             <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Submit Video</a></p> -->
+              
+                 <button id="getquote" onclick="document.getElementById('fields').style.display = 'block';">Submit Video</button>
+            <div id="fields">
+            <form id="upload">
+            
+                <section id="fb">
+                    <a id="fblink" class="facebook">Send via Facebook</a>
+                <p id="or">-or-</p>
+                </section>
+                <label id="browser">Send in browser: </label> 
+                <input type="file" id="videos" muliple required/>
+        
+            <input type="email" id="contact" placeholder="Email address" size="30" required />
+            <textarea id="note" placeholder="Problem description" rows="5 cols="25"></textarea>
+            
+            <button id="bottom-button" onclick="try {upload()} catch(e) { console.log(e) } finally { return false }">Submit</button>
+            <script> document.getElementById("bottom-button").addEventListener("click", function(){
+    document.getElementById("progress").style.display = 'block';
+    });</script>
+            <br>
+            
+            <p id="closearrow" onclick="document.getElementById('fields').style.display = 'none';">Close</p>
+            
+            </div>
+    		</form>
+            <progress value="0" max="100" id="progress"</progress>
+            <span id="thanks">Thank you! We will be in touch shortly.</span>
+            <script src="./upload.js"></script>
+            </div>
+              
+              
+              
+              
+              
+              
+              
+              
+            </div>
+          </div>
+        </div>
+       
+        </div>
+      </div>
+      
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+	  <section id="about">
+      <div class="row">
+        <div class="col-lg-4">
+          <i class="fa fa-mobile-phone fa-5x"></i>
+          <h2>1. Record</h2>
+          <p>Use your smartphone to record video or audio of your car's problem. Engine making a funny noise? Just pop open the hood and record it.</p>
+        <!-- <p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fa fa-cloud-upload fa-5x"></i>
+          <h2>2. Upload Video/Audio</h2>
+          <p>Click "Submit Video" above to submit the sample to our auto specialists for review.</p>
+         <!-- <p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <i class="fa fa-paper-plane fa-5x"></i>
+          <h2>3. Hear Back Within 10 Minutes</h2>
+          <p>Our mechanics will immediately review your video and reply using the contact info you provide.</p>
+          <p>All reviews and advice by our mechanics are completely <strong>free</strong>.</p>
+         <!-- <p><a class="btn btn-default" href="#" role="button">Learn More &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+</section>
+      <!-- START THE FEATURETTES -->
+<h2 class='g-header-text'>We service most makes and models</h2>
+<div class='section-paddingmake background-gray'>
+<div class='section-makes'>
+<div class='flex-container'>
+<div class='row'>
+</div>
+</div>
+<div class='row home-car-logos'>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/bmw@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/bmw'>BMW</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/toyota@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/toyota'>Toyota</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/honda@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/honda'>Honda</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/ford@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/ford'>Ford</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/chevrolet@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/chevrolet'>Chevrolet</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/nissan@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/nissan'>Nissan</a>
+</div>
+</div>
+<div class='row home-car-logos'>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/dodge@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/dodge'>Dodge</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/volkswagen@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/volkswagen'>Volkswagen</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/mercedes@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/mercedes-benz'>Mercedes</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/Jeep@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/jeep'>Jeep</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/acura@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/acura'>Acura</a>
+</div>
+<div class='col-lg-2 col-md-2 col-sm-4 col-xs-6 text-center'>
+<div class='image-space'>
+<img class='center-vertical flex-item' src='https://www.yourmechanic.com/assets/car_makes/hyundai@2x.png'>
+</div>
+<a class='btn-gray-stroke-small' href='/cars/hyundai'>Hyundai</a>
+</div>
+</div>
+<div class='row row-centered'>
+<div class='col-lg-4 col-md-4 col-centered'>
+<!--<a class='btn-gray-stroke' href='/cars'>SEE ALL MAKES</a>-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="info"
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Let's Fix it <span class="text-muted">Founded by Will Greenlee, certified auto mechanic</span></h2>
+          <p class="lead">Will Greenlee is a lifelong car enthusiast. While completing his auto mechanic certification at Ferris State University, he encountered numerous young car owners with questions about a noise their car was making, unsure if the car needed immediate repair to ensure safety or if the issue was ignorable. After helping more than 100 local individuals, Will Greenlee realized how many other people must have car questions. Thus, Let's Fix It was born. Free car advice through your smartphone, wherever you are, from a certified auto mechanic.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/11d/337/17ef360.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+</section>
+<section id="mechanics">
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Our Mechanics <span class="text-muted"></span></h2>
+          <p class="lead">Each of our mechanics are rigorously trained by the **National Car Association** standards and must have at least 10 years of auto mechanic experience. Each mechanic has abundant training in all car issues from dirty tires to engine grease.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="http://i.imgur.com/V8A9sUi.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+</section>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">100% Free <span class="text-muted"></span></h2>
+          <p class="lead">Let's Fix it consultations are 100% free. If you do decide to repair your car, Let's Fix it is partnered with auto-repair shops nationwide that meet our standards. Through these partnerships and referrals, Let's Fix it is able to provide you consultations free of charge.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="http://images.inmagine.com/400nwm/iris/photosindiarm-009/ptg01512248.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Let's Fix it. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+     
+      </footer>
+
+    </div><!-- /.container -->
+
+
+   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
