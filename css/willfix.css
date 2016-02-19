@@ -257,7 +257,10 @@
 .g-header-text{
 	text-align: center;
 	}
-	
+#founderimage{
+	text-align: center;
+	font-variant: italic;
+	}
 @media only screen and (max-width: 900px) {
 .first-slide {
     height: 500px;
