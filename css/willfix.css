@@ -1,13 +1,88 @@
 .first-slide {
-        height: 500px;
+        height: 600px;
     width: 100%;
     background-image: url("../images/willcar2.png");
     /* background-image: url("http://i.imgur.com/nag0dih.jpg"); */
+	background-attachment: fixed, fixed, fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -110px;
 }
+#header {
+		padding: 9em 0 9em 0 ;
+		/*background-color: #4686a0; */
+		color: rgba(255, 255, 255, 0.75);
+		background-attachment: fixed,							fixed,							fixed;
+		/*background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #503510, #C29A57 50%, #FBD391 95%); */
+		background-position: top left,						center center,					center center;
+		background-size: auto,							cover,							cover;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+	}
+#header .actions {
+			margin: 2.5em 0 0 0;
+			position: relative;
+		}
 
+			#header .actions:after {
+				background: #ffffff;
+				content: '';
+				height: 100vh;
+				left: 50%;
+				position: absolute;
+				top: 100%;
+				width: 1px;
+			}
+
+		#header .inner {
+			-moz-transition: -moz-transform 1.5s ease, opacity 2s ease;
+			-webkit-transition: -webkit-transform 1.5s ease, opacity 2s ease;
+			-ms-transition: -ms-transform 1.5s ease, opacity 2s ease;
+			transition: transform 1.5s ease, opacity 2s ease;
+			-moz-transition-delay: 0.25s;
+			-webkit-transition-delay: 0.25s;
+			-ms-transition-delay: 0.25s;
+			transition-delay: 0.25s;
+			-moz-transform: scale(1);
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1);
+			opacity: 1;
+			position: relative;
+			z-index: 1;
+		}
+
+			#header .inner .actions {
+				-moz-transition: -moz-transform 1.25s ease;
+				-webkit-transition: -webkit-transform 1.25s ease;
+				-ms-transition: -ms-transform 1.25s ease;
+				transition: transform 1.25s ease;
+				-moz-transition-delay: 1s;
+				-webkit-transition-delay: 1s;
+				-ms-transition-delay: 1s;
+				transition-delay: 1s;
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+		#header:after {
+			-moz-transition: opacity 1s ease;
+			-webkit-transition: opacity 1s ease;
+			-ms-transition: opacity 1s ease;
+			transition: opacity 1s ease;
+			background-image: linear-gradient(45deg, #4fa49a, #4361c2);
+			content: '';
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
 .carousel-inner > .item > img {
     position: absolute;
     top: -8em;
